@@ -1,0 +1,8 @@
+// @flow
+
+import { type AsyncValue } from 'type-async-value'
+
+export type AnyIterable<T, ReturnT = *, NextT = *> = AsyncValue<
+	| $Iterable<AsyncValue<T>, ReturnT, NextT>
+	| $AsyncIterable<AsyncValue<T>, ReturnT, NextT>
+>

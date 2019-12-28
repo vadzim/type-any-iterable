@@ -1,0 +1,38 @@
+{
+  "name": "type-any-iterable",
+  "version": "0.0.0",
+  "description": "type AnyIterable<T>",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "tsc --lib es2018,dom --noEmit ./test.ts && flow check ./test.js.flow",
+    "preversion": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadzim/type-any-iterable.git"
+  },
+  "keywords": [
+    "type",
+    "types",
+    "async",
+    "iterable",
+    "iterator",
+    "promise",
+    "flow",
+    "typescript"
+  ],
+  "author": "v@vadzim.info",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vadzim/type-any-iterable/issues"
+  },
+  "homepage": "https://github.com/vadzim/type-any-iterable#readme",
+  "devDependencies": {
+    "flow-bin": "^0.114.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "type-async-value": "^1.0.1"
+  }
+}
