@@ -1,7 +1,7 @@
 import { AnyIterable } from '.'
 
 async function test(seq: AnyIterable<number>) {
-	for await (const x of seq) {
+	for await (const x of await seq) {
 		console.log(x - 1)
 	}
 }
