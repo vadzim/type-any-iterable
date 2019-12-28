@@ -1,0 +1,7 @@
+flow-typed
+node_modules
+test
+.flowconfig
+.gitignore
+.npmignore
+tsconfig.json

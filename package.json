@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "ts-node ./test.ts > /dev/null && flow check ./test.js.flow",
+    "test": "flow-typed install jest; tsc --noEmit test/test.ts && flow check test/flow.test.js && jest",
     "preversion": "npm test"
   },
   "repository": {
@@ -29,11 +29,32 @@
   },
   "homepage": "https://github.com/vadzim/type-any-iterable#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "@types/jest": "^24.0.25",
+    "babel-jest": "^24.9.0",
     "flow-bin": "^0.114.0",
-    "ts-node": "^8.5.4",
+    "flow-typed": "^2.6.2",
+    "jest": "^24.9.0",
     "typescript": "^3.7.4"
   },
   "dependencies": {
     "type-async-value": "^1.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      "@babel/preset-flow",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
