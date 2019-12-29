@@ -1,4 +1,4 @@
-# type-async-value
+# type-any-iterable
 
 flow & typescript typings for the type
 
