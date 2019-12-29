@@ -6,7 +6,8 @@ it("should not fail", async () => {
 
 	async function test(seq: AnyIterable<number>) {
 		for await (const x of await seq) {
-			console.log(x - 1)
+			expect(typeof x).toBe("number")
+			expect(x - 1).toBe(41)
 		}
 	}
 
