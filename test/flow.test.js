@@ -1,7 +1,7 @@
 // @flow
 
-import { type AsyncValue } from 'type-async-value'
-import { type AnyIterable } from '..'
+import { type AsyncValue } from "type-async-value"
+import { type AnyIterable } from ".."
 
 it("should not fail", async () => {
 	// flow@0.114.0 has bugs:

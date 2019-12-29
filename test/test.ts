@@ -1,4 +1,4 @@
-import { AnyIterable } from '..'
+import { AnyIterable } from ".."
 
 it("should not fail", async () => {
 	// typescript@3.7.4 has a bug:
